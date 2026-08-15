@@ -1,3 +1,9 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+  </Folder>
   <Project Path="ShopHub.API/ShopHub.API.csproj" />
+  <Project Path="ShopHub.Application/ShopHub.Application.csproj" />
+  <Project Path="ShopHub.Domain/ShopHub.Domain.csproj" />
+  <Project Path="ShopHub.Infrastructure/ShopHub.Infrastructure.csproj" />
 </Solution>

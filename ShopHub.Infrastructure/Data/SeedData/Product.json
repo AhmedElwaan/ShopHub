@@ -1,0 +1,902 @@
+[
+  {
+    
+    "Name": "iPhone 15 Pro",
+    "Description": "Premium smartphone with advanced camera system and powerful performance.",
+    "Price": 999.99,
+    "PictureUrl": "images/products/iphone-15-pro.jpg",
+    "ProductTypeId": 1,
+    "ProductBrandId": 1
+  },
+  {
+    
+    "Name": "Galaxy S24 Ultra",
+    "Description": "Flagship Android smartphone with a high-resolution camera and S Pen.",
+    "Price": 1199.99,
+    "PictureUrl": "images/products/galaxy-s24-ultra.jpg",
+    "ProductTypeId": 1,
+    "ProductBrandId": 2
+  },
+  {
+    
+    "Name": "Xperia 1 VI",
+    "Description": "Premium Sony smartphone designed for photography, entertainment and performance.",
+    "Price": 1099.99,
+    "PictureUrl": "images/products/xperia-1-vi.jpg",
+    "ProductTypeId": 1,
+    "ProductBrandId": 3
+  },
+  {
+    
+    "Name": "MacBook Air M3",
+    "Description": "Lightweight laptop powered by Apple's M3 chip.",
+    "Price": 1099.99,
+    "PictureUrl": "images/products/macbook-air-m3.jpg",
+    "ProductTypeId": 2,
+    "ProductBrandId": 1
+  },
+  {
+    
+    "Name": "Galaxy Book4 Pro",
+    "Description": "Slim Samsung laptop with a high-resolution AMOLED display.",
+    "Price": 1399.99,
+    "PictureUrl": "images/products/galaxy-book4-pro.jpg",
+    "ProductTypeId": 2,
+    "ProductBrandId": 2
+  },
+  {
+    
+    "Name": "Dell XPS 15",
+    "Description": "Premium performance laptop suitable for work and creative applications.",
+    "Price": 1499.99,
+    "PictureUrl": "images/products/dell-xps-15.jpg",
+    "ProductTypeId": 2,
+    "ProductBrandId": 9
+  },
+  {
+    
+    "Name": "Lenovo ThinkPad X1 Carbon",
+    "Description": "Business-class laptop with a durable design and excellent keyboard.",
+    "Price": 1299.99,
+    "PictureUrl": "images/products/thinkpad-x1-carbon.jpg",
+    "ProductTypeId": 2,
+    "ProductBrandId": 11
+  },
+  {
+    
+    "Name": "ASUS ROG Zephyrus G16",
+    "Description": "High-performance gaming laptop with dedicated graphics.",
+    "Price": 1799.99,
+    "PictureUrl": "images/products/rog-zephyrus-g16.jpg",
+    "ProductTypeId": 2,
+    "ProductBrandId": 12
+  },
+  {
+    
+    "Name": "iPad Pro 12.9",
+    "Description": "Professional tablet with a large display and powerful processor.",
+    "Price": 1099.99,
+    "PictureUrl": "images/products/ipad-pro.jpg",
+    "ProductTypeId": 4,
+    "ProductBrandId": 1
+  },
+  {
+    
+    "Name": "Galaxy Tab S9",
+    "Description": "Premium Android tablet with AMOLED display and S Pen.",
+    "Price": 799.99,
+    "PictureUrl": "images/products/galaxy-tab-s9.jpg",
+    "ProductTypeId": 4,
+    "ProductBrandId": 2
+  },
+  {
+    
+    "Name": "Apple Watch Series 9",
+    "Description": "Smartwatch with health tracking, notifications and fitness features.",
+    "Price": 399.99,
+    "PictureUrl": "images/products/apple-watch-series-9.jpg",
+    "ProductTypeId": 5,
+    "ProductBrandId": 1
+  },
+  {
+    
+    "Name": "Galaxy Watch 6",
+    "Description": "Smartwatch with health monitoring and fitness tracking.",
+    "Price": 299.99,
+    "PictureUrl": "images/products/galaxy-watch-6.jpg",
+    "ProductTypeId": 5,
+    "ProductBrandId": 2
+  },
+  {
+    
+    "Name": "Sony WH-1000XM5",
+    "Description": "Wireless noise-cancelling over-ear headphones.",
+    "Price": 399.99,
+    "PictureUrl": "images/products/sony-wh1000xm5.jpg",
+    "ProductTypeId": 11,
+    "ProductBrandId": 3
+  },
+  {
+    
+    "Name": "AirPods Pro 2",
+    "Description": "Wireless earbuds with active noise cancellation.",
+    "Price": 249.99,
+    "PictureUrl": "images/products/airpods-pro-2.jpg",
+    "ProductTypeId": 12,
+    "ProductBrandId": 1
+  },
+  {
+    
+    "Name": "Galaxy Buds2 Pro",
+    "Description": "Premium wireless earbuds with immersive sound.",
+    "Price": 229.99,
+    "PictureUrl": "images/products/galaxy-buds2-pro.jpg",
+    "ProductTypeId": 12,
+    "ProductBrandId": 2
+  },
+  {
+    
+    "Name": "JBL Charge 5",
+    "Description": "Portable Bluetooth speaker with powerful sound and long battery life.",
+    "Price": 179.99,
+    "PictureUrl": "images/products/jbl-charge-5.jpg",
+    "ProductTypeId": 13,
+    "ProductBrandId": 81
+  },
+  {
+    
+    "Name": "Bose SoundLink Flex",
+    "Description": "Portable waterproof Bluetooth speaker.",
+    "Price": 149.99,
+    "PictureUrl": "images/products/bose-soundlink-flex.jpg",
+    "ProductTypeId": 13,
+    "ProductBrandId": 82
+  },
+  {
+    
+    "Name": "LG OLED C4",
+    "Description": "4K OLED television with advanced picture quality.",
+    "Price": 1699.99,
+    "PictureUrl": "images/products/lg-oled-c4.jpg",
+    "ProductTypeId": 15,
+    "ProductBrandId": 4
+  },
+  {
+    
+    "Name": "Sony Bravia XR",
+    "Description": "Premium 4K television with advanced image processing.",
+    "Price": 1599.99,
+    "PictureUrl": "images/products/sony-bravia-xr.jpg",
+    "ProductTypeId": 15,
+    "ProductBrandId": 3
+  },
+  {
+    
+    "Name": "Canon EOS R6",
+    "Description": "Full-frame mirrorless camera designed for photography and video.",
+    "Price": 2499.99,
+    "PictureUrl": "images/products/canon-eos-r6.jpg",
+    "ProductTypeId": 17,
+    "ProductBrandId": 19
+  },
+  {
+    
+    "Name": "Nikon Z6 II",
+    "Description": "Full-frame mirrorless camera with high-speed autofocus.",
+    "Price": 1999.99,
+    "PictureUrl": "images/products/nikon-z6-ii.jpg",
+    "ProductTypeId": 17,
+    "ProductBrandId": 20
+  },
+  {
+    
+    "Name": "PlayStation 5",
+    "Description": "Next-generation gaming console with high-speed SSD storage.",
+    "Price": 499.99,
+    "PictureUrl": "images/products/playstation-5.jpg",
+    "ProductTypeId": 19,
+    "ProductBrandId": 3
+  },
+  {
+    
+    "Name": "Xbox Series X",
+    "Description": "High-performance gaming console with 4K gaming support.",
+    "Price": 499.99,
+    "PictureUrl": "images/products/xbox-series-x.jpg",
+    "ProductTypeId": 19,
+    "ProductBrandId": 8
+  },
+  {
+    
+    "Name": "Nintendo Switch OLED",
+    "Description": "Hybrid gaming console with a vibrant OLED display.",
+    "Price": 349.99,
+    "PictureUrl": "images/products/nintendo-switch-oled.jpg",
+    "ProductTypeId": 19,
+    "ProductBrandId": 7
+  },
+  {
+    
+    "Name": "NVIDIA GeForce RTX 4080",
+    "Description": "High-end graphics card designed for gaming and content creation.",
+    "Price": 1099.99,
+    "PictureUrl": "images/products/rtx-4080.jpg",
+    "ProductTypeId": 23,
+    "ProductBrandId": 18
+  },
+  {
+    
+    "Name": "AMD Radeon RX 7900 XTX",
+    "Description": "High-performance graphics card for demanding gaming workloads.",
+    "Price": 949.99,
+    "PictureUrl": "images/products/radeon-rx-7900-xtx.jpg",
+    "ProductTypeId": 23,
+    "ProductBrandId": 17
+  },
+  {
+    
+    "Name": "Intel Core i9-14900K",
+    "Description": "High-performance desktop processor for demanding workloads.",
+    "Price": 589.99,
+    "PictureUrl": "images/products/intel-i9-14900k.jpg",
+    "ProductTypeId": 24,
+    "ProductBrandId": 16
+  },
+  {
+    
+    "Name": "AMD Ryzen 9 7950X",
+    "Description": "High-end processor designed for gaming and professional workloads.",
+    "Price": 549.99,
+    "PictureUrl": "images/products/ryzen-9-7950x.jpg",
+    "ProductTypeId": 24,
+    "ProductBrandId": 17
+  },
+  {
+    
+    "Name": "Corsair Vengeance 32GB",
+    "Description": "High-performance DDR5 desktop memory kit.",
+    "Price": 119.99,
+    "PictureUrl": "images/products/corsair-vengeance-32gb.jpg",
+    "ProductTypeId": 26,
+    "ProductBrandId": 84
+  },
+  {
+    
+    "Name": "Kingston Fury 32GB",
+    "Description": "Fast DDR5 memory designed for gaming computers.",
+    "Price": 109.99,
+    "PictureUrl": "images/products/kingston-fury-32gb.jpg",
+    "ProductTypeId": 26,
+    "ProductBrandId": 85
+  },
+  {
+    
+    "Name": "Samsung 990 Pro 2TB",
+    "Description": "High-speed NVMe solid state drive.",
+    "Price": 169.99,
+    "PictureUrl": "images/products/samsung-990-pro.jpg",
+    "ProductTypeId": 27,
+    "ProductBrandId": 2
+  },
+  {
+    
+    "Name": "WD Black SN850X 2TB",
+    "Description": "High-performance NVMe SSD optimized for gaming.",
+    "Price": 159.99,
+    "PictureUrl": "images/products/wd-black-sn850x.jpg",
+    "ProductTypeId": 27,
+    "ProductBrandId": 88
+  },
+  {
+    
+    "Name": "Seagate 2TB Portable HDD",
+    "Description": "Portable external hard drive for everyday storage.",
+    "Price": 79.99,
+    "PictureUrl": "images/products/seagate-2tb.jpg",
+    "ProductTypeId": 28,
+    "ProductBrandId": 87
+  },
+  {
+    
+    "Name": "SanDisk Ultra 256GB",
+    "Description": "High-capacity microSD memory card.",
+    "Price": 29.99,
+    "PictureUrl": "images/products/sandisk-256gb.jpg",
+    "ProductTypeId": 30,
+    "ProductBrandId": 86
+  },
+  {
+    
+    "Name": "Anker PowerCore 20K",
+    "Description": "High-capacity portable power bank with fast charging.",
+    "Price": 49.99,
+    "PictureUrl": "images/products/anker-powercore.jpg",
+    "ProductTypeId": 31,
+    "ProductBrandId": 93
+  },
+  {
+    
+    "Name": "Apple 20W USB-C Charger",
+    "Description": "Compact USB-C power adapter for fast charging.",
+    "Price": 29.99,
+    "PictureUrl": "images/products/apple-20w-charger.jpg",
+    "ProductTypeId": 32,
+    "ProductBrandId": 1
+  },
+  {
+    
+    "Name": "Samsung Wireless Charger",
+    "Description": "Wireless charging pad compatible with Qi devices.",
+    "Price": 39.99,
+    "PictureUrl": "images/products/samsung-wireless-charger.jpg",
+    "ProductTypeId": 33,
+    "ProductBrandId": 2
+  },
+  {
+    
+    "Name": "Belkin USB-C Cable",
+    "Description": "Durable USB-C charging and data cable.",
+    "Price": 19.99,
+    "PictureUrl": "images/products/belkin-usb-c.jpg",
+    "ProductTypeId": 34,
+    "ProductBrandId": 92
+  },
+  {
+    
+    "Name": "TP-Link Archer AX73",
+    "Description": "High-speed Wi-Fi 6 router for home networks.",
+    "Price": 179.99,
+    "PictureUrl": "images/products/tp-link-archer-ax73.jpg",
+    "ProductTypeId": 39,
+    "ProductBrandId": 89
+  },
+  {
+    
+    "Name": "Netgear Nighthawk AX5400",
+    "Description": "High-performance Wi-Fi 6 wireless router.",
+    "Price": 199.99,
+    "PictureUrl": "images/products/netgear-nighthawk.jpg",
+    "ProductTypeId": 39,
+    "ProductBrandId": 91
+  },
+  {
+    
+    "Name": "HP LaserJet Pro",
+    "Description": "Monochrome laser printer for home and office use.",
+    "Price": 249.99,
+    "PictureUrl": "images/products/hp-laserjet-pro.jpg",
+    "ProductTypeId": 42,
+    "ProductBrandId": 10
+  },
+  {
+    
+    "Name": "Canon PIXMA G6020",
+    "Description": "All-in-one wireless inkjet printer.",
+    "Price": 299.99,
+    "PictureUrl": "images/products/canon-pixma-g6020.jpg",
+    "ProductTypeId": 42,
+    "ProductBrandId": 19
+  },
+  {
+    
+    "Name": "Dyson V15 Detect",
+    "Description": "Cordless vacuum cleaner with advanced dust detection.",
+    "Price": 749.99,
+    "PictureUrl": "images/products/dyson-v15.jpg",
+    "ProductTypeId": 57,
+    "ProductBrandId": 27
+  },
+  {
+    
+    "Name": "Philips Airfryer XXL",
+    "Description": "Large-capacity air fryer for convenient home cooking.",
+    "Price": 199.99,
+    "PictureUrl": "images/products/philips-airfryer.jpg",
+    "ProductTypeId": 99,
+    "ProductBrandId": 22
+  },
+  {
+    
+    "Name": "Bosch Series 6 Dishwasher",
+    "Description": "Efficient dishwasher with multiple cleaning programs.",
+    "Price": 899.99,
+    "PictureUrl": "images/products/bosch-dishwasher.jpg",
+    "ProductTypeId": 50,
+    "ProductBrandId": 23
+  },
+  {
+    
+    "Name": "LG Smart Refrigerator",
+    "Description": "Modern refrigerator with smart cooling technology.",
+    "Price": 1599.99,
+    "PictureUrl": "images/products/lg-refrigerator.jpg",
+    "ProductTypeId": 46,
+    "ProductBrandId": 4
+  },
+  {
+    
+    "Name": "Samsung Front Load Washer",
+    "Description": "Energy-efficient washing machine with smart controls.",
+    "Price": 899.99,
+    "PictureUrl": "images/products/samsung-washer.jpg",
+    "ProductTypeId": 48,
+    "ProductBrandId": 2
+  },
+  {
+    
+    "Name": "Whirlpool Microwave",
+    "Description": "Compact microwave oven suitable for modern kitchens.",
+    "Price": 179.99,
+    "PictureUrl": "images/products/whirlpool-microwave.jpg",
+    "ProductTypeId": 51,
+    "ProductBrandId": 25
+  },
+  {
+    
+    "Name": "Tefal Electric Kettle",
+    "Description": "Fast-boiling electric kettle with automatic shutoff.",
+    "Price": 59.99,
+    "PictureUrl": "images/products/tefal-kettle.jpg",
+    "ProductTypeId": 53,
+    "ProductBrandId": 28
+  },
+  {
+    
+    "Name": "Kenwood Blender",
+    "Description": "Powerful kitchen blender suitable for smoothies and food preparation.",
+    "Price": 89.99,
+    "PictureUrl": "images/products/kenwood-blender.jpg",
+    "ProductTypeId": 55,
+    "ProductBrandId": 29
+  },
+  {
+    
+    "Name": "Nike Air Max 270",
+    "Description": "Comfortable lifestyle running-inspired sneakers.",
+    "Price": 149.99,
+    "PictureUrl": "images/products/nike-air-max.jpg",
+    "ProductTypeId": 69,
+    "ProductBrandId": 31
+  },
+  {
+    
+    "Name": "Adidas Ultraboost",
+    "Description": "Performance running shoes with responsive cushioning.",
+    "Price": 179.99,
+    "PictureUrl": "images/products/adidas-ultraboost.jpg",
+    "ProductTypeId": 70,
+    "ProductBrandId": 32
+  },
+  {
+    
+    "Name": "Puma RS-X",
+    "Description": "Modern lifestyle sneakers with a bold design.",
+    "Price": 119.99,
+    "PictureUrl": "images/products/puma-rsx.jpg",
+    "ProductTypeId": 69,
+    "ProductBrandId": 33
+  },
+  {
+    
+    "Name": "New Balance 574",
+    "Description": "Classic everyday sneakers with comfortable cushioning.",
+    "Price": 99.99,
+    "PictureUrl": "images/products/new-balance-574.jpg",
+    "ProductTypeId": 69,
+    "ProductBrandId": 35
+  },
+  {
+    
+    "Name": "Levi's 501 Jeans",
+    "Description": "Classic straight-fit denim jeans.",
+    "Price": 79.99,
+    "PictureUrl": "images/products/levis-501.jpg",
+    "ProductTypeId": 72,
+    "ProductBrandId": 41
+  },
+  {
+   
+    "Name": "Zara Basic T-Shirt",
+    "Description": "Classic cotton T-shirt for everyday wear.",
+    "Price": 29.99,
+    "PictureUrl": "images/products/zara-tshirt.jpg",
+    "ProductTypeId": 71,
+    "ProductBrandId": 42
+  },
+  {
+    
+    "Name": "H&M Oversized Hoodie",
+    "Description": "Comfortable oversized hoodie for casual outfits.",
+    "Price": 49.99,
+    "PictureUrl": "images/products/hm-hoodie.jpg",
+    "ProductTypeId": 74,
+    "ProductBrandId": 43
+  },
+  {
+    
+    "Name": "Uniqlo Ultra Light Jacket",
+    "Description": "Lightweight jacket suitable for everyday outdoor use.",
+    "Price": 79.99,
+    "PictureUrl": "images/products/uniqlo-jacket.jpg",
+    "ProductTypeId": 73,
+    "ProductBrandId": 44
+  },
+  {
+    
+    "Name": "Tommy Hilfiger Backpack",
+    "Description": "Stylish everyday backpack with multiple compartments.",
+    "Price": 99.99,
+    "PictureUrl": "images/products/tommy-backpack.jpg",
+    "ProductTypeId": 76,
+    "ProductBrandId": 47
+  },
+  {
+    
+    "Name": "Ray-Ban Aviator",
+    "Description": "Classic aviator sunglasses with UV protection.",
+    "Price": 159.99,
+    "PictureUrl": "images/products/ray-ban-aviator.jpg",
+    "ProductTypeId": 78,
+    "ProductBrandId": 49
+  },
+  {
+    
+    "Name": "Garmin Forerunner 265",
+    "Description": "Advanced GPS running smartwatch with fitness tracking.",
+    "Price": 449.99,
+    "PictureUrl": "images/products/garmin-forerunner.jpg",
+    "ProductTypeId": 5,
+    "ProductBrandId": 94
+  },
+  {
+    
+    "Name": "Fitbit Charge 6",
+    "Description": "Fitness tracker with heart-rate and activity monitoring.",
+    "Price": 159.99,
+    "PictureUrl": "images/products/fitbit-charge-6.jpg",
+    "ProductTypeId": 6,
+    "ProductBrandId": 95
+  },
+  {
+    
+    "Name": "GoPro HERO12",
+    "Description": "Compact action camera designed for outdoor adventures.",
+    "Price": 399.99,
+    "PictureUrl": "images/products/gopro-hero12.jpg",
+    "ProductTypeId": 17,
+    "ProductBrandId": 96
+  },
+  {
+    
+    "Name": "DJI Mini 4 Pro",
+    "Description": "Compact camera drone with advanced flight features.",
+    "Price": 759.99,
+    "PictureUrl": "images/products/dji-mini-4-pro.jpg",
+    "ProductTypeId": 17,
+    "ProductBrandId": 97
+  },
+  {
+    
+    "Name": "Marshall Emberton II",
+    "Description": "Portable Bluetooth speaker with classic Marshall styling.",
+    "Price": 169.99,
+    "PictureUrl": "images/products/marshall-emberton.jpg",
+    "ProductTypeId": 13,
+    "ProductBrandId": 98
+  },
+  {
+    
+    "Name": "Sonos Era 100",
+    "Description": "Wireless smart speaker with room-filling sound.",
+    "Price": 249.99,
+    "PictureUrl": "images/products/sonos-era-100.jpg",
+    "ProductTypeId": 13,
+    "ProductBrandId": 100
+  },
+  {
+    
+    "Name": "Bowers & Wilkins PX8",
+    "Description": "Premium wireless noise-cancelling headphones.",
+    "Price": 699.99,
+    "PictureUrl": "images/products/bw-px8.jpg",
+    "ProductTypeId": 11,
+    "ProductBrandId": 99
+  },
+  {
+    
+    "Name": "Logitech MX Master 3S",
+    "Description": "Advanced wireless productivity mouse.",
+    "Price": 99.99,
+    "PictureUrl": "images/products/logitech-mx-master-3s.jpg",
+    "ProductTypeId": 9,
+    "ProductBrandId": 84
+  },
+  {
+    
+    "Name": "Razer BlackWidow V4",
+    "Description": "Mechanical gaming keyboard with customizable lighting.",
+    "Price": 169.99,
+    "PictureUrl": "images/products/razer-blackwidow-v4.jpg",
+    "ProductTypeId": 8,
+    "ProductBrandId": 15
+  },
+  {
+    
+    "Name": "ASUS ProArt Monitor",
+    "Description": "Professional monitor designed for creators and designers.",
+    "Price": 499.99,
+    "PictureUrl": "images/products/asus-proart-monitor.jpg",
+    "ProductTypeId": 7,
+    "ProductBrandId": 12
+  },
+  {
+    
+    "Name": "Dell UltraSharp 27",
+    "Description": "Professional 27-inch monitor with accurate color reproduction.",
+    "Price": 549.99,
+    "PictureUrl": "images/products/dell-ultrasharp.jpg",
+    "ProductTypeId": 7,
+    "ProductBrandId": 9
+  },
+  {
+    
+    "Name": "Acer Nitro Gaming Monitor",
+    "Description": "Gaming monitor with a high refresh rate.",
+    "Price": 299.99,
+    "PictureUrl": "images/products/acer-nitro-monitor.jpg",
+    "ProductTypeId": 7,
+    "ProductBrandId": 13
+  },
+  {
+    
+    "Name": "MSI Gaming Desktop",
+    "Description": "Prebuilt gaming desktop with powerful components.",
+    "Price": 1599.99,
+    "PictureUrl": "images/products/msi-gaming-desktop.jpg",
+    "ProductTypeId": 3,
+    "ProductBrandId": 14
+  },
+  {
+    
+    "Name": "HP Pavilion Desktop",
+    "Description": "Everyday desktop computer for home and office use.",
+    "Price": 699.99,
+    "PictureUrl": "images/products/hp-pavilion-desktop.jpg",
+    "ProductTypeId": 3,
+    "ProductBrandId": 10
+  },
+  {
+    
+    "Name": "Microsoft Surface Laptop",
+    "Description": "Slim productivity laptop with a premium design.",
+    "Price": 999.99,
+    "PictureUrl": "images/products/surface-laptop.jpg",
+    "ProductTypeId": 2,
+    "ProductBrandId": 8
+  },
+  {
+    
+    "Name": "Google Pixel 8 Pro",
+    "Description": "Google flagship smartphone with advanced computational photography.",
+    "Price": 999.99,
+    "PictureUrl": "images/products/pixel-8-pro.jpg",
+    "ProductTypeId": 1,
+    "ProductBrandId": 7
+  },
+  {
+    
+    "Name": "Xiaomi Pad 6",
+    "Description": "Affordable Android tablet with a high-resolution display.",
+    "Price": 399.99,
+    "PictureUrl": "images/products/xiaomi-pad-6.jpg",
+    "ProductTypeId": 4,
+    "ProductBrandId": 6
+  },
+  {
+    
+    "Name": "Huawei Watch GT 4",
+    "Description": "Smartwatch with health monitoring and long battery life.",
+    "Price": 299.99,
+    "PictureUrl": "images/products/huawei-watch-gt4.jpg",
+    "ProductTypeId": 5,
+    "ProductBrandId": 5
+  },
+  {
+    
+    "Name": "Philips Sonicare Toothbrush",
+    "Description": "Electric toothbrush with multiple cleaning modes.",
+    "Price": 129.99,
+    "PictureUrl": "images/products/philips-sonicare.jpg",
+    "ProductTypeId": 64,
+    "ProductBrandId": 22
+  },
+  {
+    
+    "Name": "Braun Electric Shaver",
+    "Description": "Electric shaver designed for comfortable daily grooming.",
+    "Price": 149.99,
+    "PictureUrl": "images/products/braun-shaver.jpg",
+    "ProductTypeId": 61,
+    "ProductBrandId": 30
+  },
+  {
+    
+    "Name": "Nivea Men Face Wash",
+    "Description": "Daily facial cleanser designed for men's skincare.",
+    "Price": 14.99,
+    "PictureUrl": "images/products/nivea-face-wash.jpg",
+    "ProductTypeId": 67,
+    "ProductBrandId": 63
+  },
+  {
+    
+    "Name": "L'Oreal Revitalift Cream",
+    "Description": "Facial skincare cream for daily moisturizing.",
+    "Price": 24.99,
+    "PictureUrl": "images/products/loreal-cream.jpg",
+    "ProductTypeId": 67,
+    "ProductBrandId": 61
+  },
+  {
+    
+    "Name": "Garnier Shampoo",
+    "Description": "Daily hair care shampoo for healthy-looking hair.",
+    "Price": 9.99,
+    "PictureUrl": "images/products/garnier-shampoo.jpg",
+    "ProductTypeId": 68,
+    "ProductBrandId": 65
+  },
+  {
+    
+    "Name": "Dove Body Wash",
+    "Description": "Moisturizing body wash for daily use.",
+    "Price": 8.99,
+    "PictureUrl": "images/products/dove-body-wash.jpg",
+    "ProductTypeId": 67,
+    "ProductBrandId": 64
+  },
+  {
+    
+    "Name": "Calvin Klein Wallet",
+    "Description": "Minimalist leather wallet with multiple card slots.",
+    "Price": 69.99,
+    "PictureUrl": "images/products/calvin-klein-wallet.jpg",
+    "ProductTypeId": 79,
+    "ProductBrandId": 46
+  },
+  {
+    
+    "Name": "Ralph Lauren Polo Shirt",
+    "Description": "Classic polo shirt suitable for casual and smart-casual outfits.",
+    "Price": 89.99,
+    "PictureUrl": "images/products/ralph-lauren-polo.jpg",
+    "ProductTypeId": 71,
+    "ProductBrandId": 48
+  },
+  {
+    
+    "Name": "Prada Sunglasses",
+    "Description": "Premium designer sunglasses with UV protection.",
+    "Price": 299.99,
+    "PictureUrl": "images/products/prada-sunglasses.jpg",
+    "ProductTypeId": 78,
+    "ProductBrandId": 50
+  },
+  {
+    
+    "Name": "Toyota Car Phone Holder",
+    "Description": "Adjustable phone holder designed for use in vehicles.",
+    "Price": 29.99,
+    "PictureUrl": "images/products/toyota-phone-holder.jpg",
+    "ProductTypeId": 81,
+    "ProductBrandId": 51
+  },
+  {
+    
+    "Name": "Garmin Dash Cam Mini",
+    "Description": "Compact dashboard camera for vehicle recording.",
+    "Price": 149.99,
+    "PictureUrl": "images/products/garmin-dash-cam.jpg",
+    "ProductTypeId": 83,
+    "ProductBrandId": 94
+  },
+  {
+    
+    "Name": "BMW Car Charger",
+    "Description": "Compact USB charger for charging mobile devices in vehicles.",
+    "Price": 39.99,
+    "PictureUrl": "images/products/bmw-car-charger.jpg",
+    "ProductTypeId": 82,
+    "ProductBrandId": 54
+  },
+  {
+    
+    "Name": "Amazon Kindle Paperwhite",
+    "Description": "E-reader with a glare-free display and long battery life.",
+    "Price": 149.99,
+    "PictureUrl": "images/products/kindle-paperwhite.jpg",
+    "ProductTypeId": 86,
+    "ProductBrandId": 101
+  },
+  {
+    
+    "Name": "Moleskine Classic Notebook",
+    "Description": "Premium hardcover notebook for writing and planning.",
+    "Price": 24.99,
+    "PictureUrl": "images/products/moleskine-notebook.jpg",
+    "ProductTypeId": 87,
+    "ProductBrandId": 102
+  },
+  {
+    
+    "Name": "Logitech Brio Webcam",
+    "Description": "High-resolution webcam suitable for video meetings and streaming.",
+    "Price": 149.99,
+    "PictureUrl": "images/products/logitech-brio.jpg",
+    "ProductTypeId": 10,
+    "ProductBrandId": 84
+  },
+  {
+    
+    "Name": "Philips LED Smart Bulb",
+    "Description": "Smart LED bulb with adjustable lighting and app control.",
+    "Price": 29.99,
+    "PictureUrl": "images/products/philips-smart-bulb.jpg",
+    "ProductTypeId": 92,
+    "ProductBrandId": 22
+  },
+  {
+   
+    "Name": "Google Nest Doorbell",
+    "Description": "Smart video doorbell with mobile notifications.",
+    "Price": 179.99,
+    "PictureUrl": "images/products/google-doorbell.jpg",
+    "ProductTypeId": 95,
+    "ProductBrandId": 7
+  },
+  {
+    
+    "Name": "TP-Link Tapo Security Camera",
+    "Description": "Indoor smart security camera with remote monitoring.",
+    "Price": 49.99,
+    "PictureUrl": "images/products/tapo-security-camera.jpg",
+    "ProductTypeId": 94,
+    "ProductBrandId": 89
+  },
+  {
+    
+    "Name": "Belkin Power Strip",
+    "Description": "Multi-outlet power strip with surge protection.",
+    "Price": 39.99,
+    "PictureUrl": "images/products/belkin-power-strip.jpg",
+    "ProductTypeId": 96,
+    "ProductBrandId": 92
+  },
+  {
+    
+    "Name": "Bosch Professional Drill",
+    "Description": "Cordless power drill designed for home and professional projects.",
+    "Price": 199.99,
+    "PictureUrl": "images/products/bosch-drill.jpg",
+    "ProductTypeId": 98,
+    "ProductBrandId": 23
+  },
+  {
+    
+    "Name": "Coca-Cola Classic",
+    "Description": "Classic carbonated soft drink.",
+    "Price": 1.99,
+    "PictureUrl": "images/products/coca-cola.jpg",
+    "ProductTypeId": 101,
+    "ProductBrandId": 71
+  },
+  {
+    
+    "Name": "Red Bull Energy Drink",
+    "Description": "Carbonated energy drink.",
+    "Price": 2.49,
+    "PictureUrl": "images/products/red-bull.jpg",
+    "ProductTypeId": 101,
+    "ProductBrandId": 80
+  }
+]
