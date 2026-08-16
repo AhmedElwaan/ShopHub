@@ -14,13 +14,14 @@ namespace ShopHub.API.Controllers.Catalog
         public ProductController(IProductService productService)
         {
             _productService = productService;
+            
         }
 
 
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<ProductDto>>> GetAllProducts()
+        public async Task<ActionResult<IReadOnlyList<ProductDto>>> GetAllProducts([FromQuery] ProductSpecPrams specPrams)
         {
-            var products = await _productService.GetAllProductsAsync();
+            var products = await _productService.GetAllProductsAsync(specPrams);
 
             return Ok(products);
         }

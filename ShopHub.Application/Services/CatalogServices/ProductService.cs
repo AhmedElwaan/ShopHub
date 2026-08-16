@@ -23,9 +23,9 @@ namespace ShopHub.Application.Services.CatalogServices
         }
 
         // -- Method to get all products asynchronously and map them to ProductDto
-        public async Task<IReadOnlyList<ProductDto>> GetAllProductsAsync()
+        public async Task<IReadOnlyList<ProductDto>> GetAllProductsAsync(ProductSpecPrams specParams)
         {
-            var products = await _productRepo.GetAllAsync();
+            var products = await _productRepo.GetAllAsync(specParams);
 
             return _mapper.Map<IReadOnlyList<ProductDto>>(products);
         }

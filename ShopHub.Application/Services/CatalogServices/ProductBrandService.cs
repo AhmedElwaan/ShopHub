@@ -21,9 +21,9 @@ namespace ShopHub.Application.Services.CatalogServices
             _productbrandrepo = productbrandrepo;
             _mapper = mapper;
         }
-        public async Task<IReadOnlyList<ProductBrandDto>> GetAllProductBrandsAsync()
+        public async Task<IReadOnlyList<ProductBrandDto>> GetAllProductBrandsAsync(ProductSpecPrams specPrams)
         {
-            var productBrands = await _productbrandrepo.GetAllAsync();
+            var productBrands = await _productbrandrepo.GetAllAsync(specPrams);
 
             return _mapper.Map<IReadOnlyList<ProductBrandDto>>(productBrands);
         }
