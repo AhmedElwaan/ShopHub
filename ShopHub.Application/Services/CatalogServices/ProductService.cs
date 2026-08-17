@@ -2,6 +2,7 @@
 using ShopHub.Application.DTOs.CatalogDTOs;
 using ShopHub.Application.Interfaces;
 using ShopHub.Application.Interfaces.ICatalog;
+using ShopHub.Application.Specifications;
 using ShopHub.Domain.Entities.Catalog;
 using System;
 using System.Collections.Generic;
@@ -23,17 +24,29 @@ namespace ShopHub.Application.Services.CatalogServices
         }
 
         // -- Method to get all products asynchronously and map them to ProductDto
-        public async Task<IReadOnlyList<ProductDto>> GetAllProductsAsync(ProductSpecPrams specParams)
+        public async Task<Pagination<ProductDto>> GetAllProductsAsync(ProductSpecPrams specParams)
         {
-            var products = await _productRepo.GetAllAsync(specParams);
+            var spec = new ProductsWithTypesAndBrandsSpecification(specParams);
 
-            return _mapper.Map<IReadOnlyList<ProductDto>>(products);
+            var count = await _productRepo.CountAsync(spec);
+
+            var products = await _productRepo.GetAllWithSpecAsync(spec);
+
+            var data = _mapper.Map<IReadOnlyList<ProductDto>>(products);
+
+            return  new Pagination<ProductDto>(
+                specParams.PageIndex,
+                specParams.PageSize,
+                count,
+                data);
         }
 
         // -- Method to get a product by its ID asynchronously and map it to ProductDto 
         public async Task<ProductDto?> GetProductByIdAsync(int id)
         {
-            var product = await _productRepo.GetByIdAsync(id);
+            var spec = new ProductsWithTypesAndBrandsSpecification(id);
+            
+            var product = await _productRepo.GetByIdWithSpecAsync(spec);
 
             if(product is null)
                 return null;

@@ -1,4 +1,6 @@
 ﻿using ShopHub.Application.DTOs.CatalogDTOs;
+using ShopHub.Application.Specifications;
+using ShopHub.Domain.Entities.Catalog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +11,7 @@ namespace ShopHub.Application.Interfaces.ICatalog
 {
     public interface IProductService
     {
-        Task<IReadOnlyList<ProductDto>> GetAllProductsAsync(ProductSpecPrams specParams);
+        Task<Pagination<ProductDto>> GetAllProductsAsync(ProductSpecPrams specParams);
         Task<ProductDto?> GetProductByIdAsync(int id);
         
     }

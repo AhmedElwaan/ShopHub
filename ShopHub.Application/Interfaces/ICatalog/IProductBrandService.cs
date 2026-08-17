@@ -9,7 +9,7 @@ namespace ShopHub.Application.Interfaces.ICatalog
 {
     public interface IProductBrandService
     {
-        Task<IReadOnlyList<ProductBrandDto>> GetAllProductBrandsAsync(ProductSpecPrams specPrams);
+        Task<IReadOnlyList<ProductBrandDto>> GetAllProductBrandsAsync();
         Task<ProductBrandDto?> GetProductBrandByIdAsync(int id);
     }
 }

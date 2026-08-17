@@ -2,6 +2,7 @@
 using ShopHub.Application.DTOs.CatalogDTOs;
 using ShopHub.Application.Interfaces;
 using ShopHub.Application.Interfaces.ICatalog;
+using ShopHub.Application.Specifications;
 using ShopHub.Domain.Entities.Catalog.Domain;
 using System;
 using System.Collections.Generic;
@@ -23,9 +24,10 @@ namespace ShopHub.Application.Services.CatalogServices
         }
 
         // -- Method to get all product types asynchronously and map them to ProductTypeDto
-        public async Task<IReadOnlyList<ProductTypeDto>> GetAllProductTypesAsync(ProductSpecPrams specPrams)
+        public async Task<IReadOnlyList<ProductTypeDto>> GetAllProductTypesAsync()
         {
-           var productTypes = await _producyTypeRepo.GetAllAsync(specPrams);
+
+           var productTypes = await _producyTypeRepo.GetAllAsync();
 
             return _mapper.Map<IReadOnlyList<ProductTypeDto>>(productTypes);
         }

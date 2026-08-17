@@ -19,15 +19,15 @@ namespace ShopHub.API.Controllers.Catalog
 
 
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<ProductTypeDto>>> GetAllProductTypes(ProductSpecPrams specPrams)
+        public async Task<ActionResult<IReadOnlyList<ProductTypeDto>>> GetAllProductTypes()
         {
-            var productTypes = await _productTypeService.GetAllProductTypesAsync(specPrams);
+            var productTypes = await _productTypeService.GetAllProductTypesAsync();
 
             return Ok(productTypes);
         }
 
         [HttpGet("{id:int}")]
-        public async Task<ActionResult<IReadOnlyList<ProductTypeDto>>> GetAllProductTtpeById(int id)
+        public async Task<ActionResult<IReadOnlyList<ProductTypeDto>>> GetAllProductTypeById(int id)
         {
             var productType = await _productTypeService.GetProductTypeByIdAsync(id);
 

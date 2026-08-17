@@ -17,9 +17,8 @@ namespace ShopHub.API.Controllers.Catalog
             
         }
 
-
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<ProductDto>>> GetAllProducts([FromQuery] ProductSpecPrams specPrams)
+        public async Task<ActionResult<Pagination<ProductDto>>> GetAllProducts([FromQuery] ProductSpecPrams specPrams)
         {
             var products = await _productService.GetAllProductsAsync(specPrams);
 

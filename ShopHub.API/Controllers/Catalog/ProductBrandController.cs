@@ -18,15 +18,15 @@ namespace ShopHub.API.Controllers.Catalog
 
 
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<ProductBrandDto>>> GetAllProducts(ProductSpecPrams specPrams)
+        public async Task<ActionResult<IReadOnlyList<ProductBrandDto>>> GetAllProductBrands()
         {
-            var productBrands = await _productBrandService.GetAllProductBrandsAsync(specPrams);
+            var productBrands = await _productBrandService.GetAllProductBrandsAsync();
 
             return Ok(productBrands);
         }
 
         [HttpGet("{id:int}")]
-        public async Task<ActionResult<IReadOnlyList<ProductBrandDto>>> GetAllProductsById(int id)
+        public async Task<ActionResult<IReadOnlyList<ProductBrandDto>>> GetAllProductBrandById(int id)
         {
             var productBrand = await _productBrandService.GetProductBrandByIdAsync(id);
 
