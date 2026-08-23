@@ -1,10 +1,16 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ShopHub.Application.Interfaces;
+using ShopHub.Application.Interfaces.IAccount;
 using ShopHub.Application.Interfaces.ICatalog;
 using ShopHub.Application.Mapping;
 using ShopHub.Application.Services.CatalogServices;
+using ShopHub.Domain.Entities.Identity;
 using ShopHub.Infrastructure.Data;
 using ShopHub.Infrastructure.Data.SeedData;
+using ShopHub.Infrastructure.IdentityData;
+using ShopHub.Infrastructure.InfraService.Account;
 using ShopHub.Infrastructure.Repositories;
 
 
@@ -24,6 +30,7 @@ namespace ShopHub.API
 
             builder.Services.AddScoped(typeof(IGenricRepo<>), typeof(GenricRepository<>));
 
+            
             builder.Services.AddDbContext<AppDbContext>(
                 options => options.UseSqlServer
                 (builder.Configuration.GetConnectionString("DefaultConnection")
@@ -36,9 +43,27 @@ namespace ShopHub.API
             builder.Services.AddScoped<IProductBrandService, ProductBrandService>();
             builder.Services.AddScoped<IProductTypeService, ProductTypeService>();
 
+            // -- Identity Database 
+            builder.Services.AddDbContext<Identitydbcontext>(
+                options => options.UseSqlServer
+                (builder.Configuration.GetConnectionString("IdentityUserConnection")
+                )); // -- Registered as a Scoped
 
+            builder.Services.AddIdentity<AppUser, IdentityRole>()
+                .AddEntityFrameworkStores<Identitydbcontext>()
+                .AddDefaultTokenProviders();
 
+            builder.Services.Configure<IdentityOptions>(options =>
+            {
+                options.Password.RequiredLength = 12;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequireUppercase = true;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireDigit = true;
+                
+            });
 
+            builder.Services.AddScoped<ITokenService, TokenService>();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -63,6 +88,8 @@ namespace ShopHub.API
             }
 
             app.UseHttpsRedirection();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
