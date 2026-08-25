@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,8 +31,8 @@ namespace ShopHub.Infrastructure.InfraService.Account
             {
                 new Claim(ClaimTypes.NameIdentifier , user.Id),
                 new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.GivenName, user.DisplayName!),
-                
+                new Claim(ClaimTypes.GivenName, user.DisplayName!)
+
             };
 
             var roles = await _userManager.GetRolesAsync(user);
@@ -52,13 +53,29 @@ namespace ShopHub.Infrastructure.InfraService.Account
                 issuer: _configration["Token:Issuer"],
                 audience: _configration["Token:Audience"],
                 claims: userClaims,
-                expires : DateTime.UtcNow.AddDays(double.Parse(_configration["Token:ExpiresInDays"])),
+                expires : DateTime.UtcNow.AddMinutes(double.Parse(_configration["Token:AccessTokenExpirationMinutes"])),
                 signingCredentials: credentials
                 
                 );
 
             // Serialize into the final "header.payload.signature" string 
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        public string GenerateRefreshToken()
+        {
+            var randomNumber = new byte[64];
+
+            using var rng = RandomNumberGenerator.Create();
+            rng.GetBytes(randomNumber);
+
+            return Convert.ToBase64String(randomNumber);
+        }
+
+        public string HashToken(string token)
+        {
+            var bytes = SHA256.HashData(Encoding.UTF8.GetBytes(token));
+            return Convert.ToBase64String(bytes);
         }
     }
 }

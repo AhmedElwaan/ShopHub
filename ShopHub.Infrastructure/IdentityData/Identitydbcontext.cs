@@ -15,5 +15,7 @@ namespace ShopHub.Infrastructure.IdentityData
         {
             
         }
+
+        public DbSet<RefreshToken> RefreshTokens { get; set; } = null!;
     }
 }

@@ -1,6 +1,8 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using ShopHub.Application.Interfaces;
 using ShopHub.Application.Interfaces.IAccount;
 using ShopHub.Application.Interfaces.ICatalog;
@@ -12,6 +14,7 @@ using ShopHub.Infrastructure.Data.SeedData;
 using ShopHub.Infrastructure.IdentityData;
 using ShopHub.Infrastructure.InfraService.Account;
 using ShopHub.Infrastructure.Repositories;
+using System.Text;
 
 
 namespace ShopHub.API
@@ -64,6 +67,37 @@ namespace ShopHub.API
             });
 
             builder.Services.AddScoped<ITokenService, TokenService>();
+
+            builder.Services.
+                AddAuthentication(JwtBearerDefaults.AuthenticationScheme).
+                AddJwtBearer(options =>
+                {
+                    var key = builder.Configuration["Jwt:Key"];
+                    var issuer = builder.Configuration["Jwt:Issuer"];
+                    var audience = builder.Configuration["Jwt:Audience"];
+
+                    if (string.IsNullOrWhiteSpace(key))
+                        throw new InvalidOperationException("JWT Key is not configured.");
+
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+
+                        IssuerSigningKey = new SymmetricSecurityKey(
+                            Encoding.UTF8.GetBytes(key)),
+
+                        ValidateIssuer = true,
+                        ValidIssuer = issuer,
+
+                        ValidateAudience = true,
+                        ValidAudience = audience,
+
+                        ValidateLifetime = true,
+
+                        ClockSkew = TimeSpan.Zero
+                    };
+                });
+            builder.Services.AddScoped<IRefreshTokenServices , RefreshTokenService>();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

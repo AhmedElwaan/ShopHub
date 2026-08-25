@@ -10,6 +10,7 @@ namespace ShopHub.Application.Interfaces.IAccount
     public interface ITokenService
     {
         Task<string> CreateTokenAsync(AppUser user);
-
+        string GenerateRefreshToken();
+        string HashToken(string token);
     }
 }
