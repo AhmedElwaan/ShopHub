@@ -165,5 +165,31 @@ namespace ShopHub.API.Controllers.Account
 
             return Ok(refreshToken);
         }
+
+        [Authorize]
+        [HttpPost("logout")]
+        public async Task<ActionResult> Logout()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized(new 
+                { 
+                    message = "Unauthorized" 
+                });
+
+            var result = await _refreshTokenService.RevokeRefreshTokenAsync(userId);
+
+            if (!result)
+                return NotFound(new
+                {
+                    message = "User not found."
+                });
+
+
+            return Ok(new 
+            { 
+                message = "Logged out successfully." 
+            });
+        }
     }
 }

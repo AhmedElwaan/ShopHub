@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using ShopHub.Application.DTOs.IDentityDTOs;
 using ShopHub.Application.Interfaces.IAccount;
 using ShopHub.Domain.Entities.Identity;
@@ -15,12 +16,18 @@ namespace ShopHub.Infrastructure.InfraService.Account
     {
         private readonly Identitydbcontext _identityContext;
         private readonly ITokenService _tokenService;
+        private readonly UserManager<AppUser> _userManager;
+        private readonly Identitydbcontext _appdbcontext;
 
         public RefreshTokenService(
             Identitydbcontext identityContext,
-            ITokenService tokenService) 
+            ITokenService tokenService,
+            UserManager<AppUser> userManager,
+            Identitydbcontext appdbcontext) 
         {
             _tokenService = tokenService;
+            _userManager = userManager;
+            _appdbcontext = appdbcontext;
             _identityContext = identityContext;
             
         }
@@ -78,6 +85,26 @@ namespace ShopHub.Infrastructure.InfraService.Account
                 }
 
             };
+        }
+
+        public async Task<bool> RevokeRefreshTokenAsync(string userId)
+        {
+            var user = await _userManager.Users.Include(u => u.RefreshTokens).FirstOrDefaultAsync(u => u.Id == userId);
+
+            if (user == null)
+                return false;
+
+            foreach (var refreshToken in user.RefreshTokens)
+            {
+                if (refreshToken.IsActive)
+                {
+                    refreshToken.RevokedOn = DateTime.UtcNow;
+                }
+            }
+
+            await _appdbcontext.SaveChangesAsync();
+
+            return true;
         }
     }
     

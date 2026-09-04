@@ -10,5 +10,6 @@ namespace ShopHub.Application.Interfaces.IAccount
     public interface IRefreshTokenServices
     {
         Task<LoginResponseDto?> RefreshAsync(string refresherToken);
+        Task<bool> RevokeRefreshTokenAsync(string userId);
     }
 }
