@@ -5,8 +5,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using ShopHub.Application.Interfaces;
 using ShopHub.Application.Interfaces.IAccount;
+using ShopHub.Application.Interfaces.IBasket;
 using ShopHub.Application.Interfaces.ICatalog;
 using ShopHub.Application.Mapping;
+using ShopHub.Application.Services.BasketService;
 using ShopHub.Application.Services.CatalogServices;
 using ShopHub.Domain.Entities.Identity;
 using ShopHub.Infrastructure.Data;
@@ -14,6 +16,8 @@ using ShopHub.Infrastructure.Data.SeedData;
 using ShopHub.Infrastructure.IdentityData;
 using ShopHub.Infrastructure.InfraService.Account;
 using ShopHub.Infrastructure.Repositories;
+using ShopHub.Infrastructure.Repositories.BasketRepo;
+using StackExchange.Redis;
 using System.Text;
 
 
@@ -98,6 +102,19 @@ namespace ShopHub.API
                     };
                 });
             builder.Services.AddScoped<IRefreshTokenServices , RefreshTokenService>();
+
+            // 1. Redis connection (the basket store)
+            builder.Services.AddSingleton<IConnectionMultiplexer>(options =>
+            {
+                var connectionString = builder.Configuration.GetConnectionString("Redis");
+                return ConnectionMultiplexer.Connect(connectionString!);
+            });
+
+            // 2. Basket repository (Redis implementation)
+            builder.Services.AddScoped<IBasketRepository, BasketRepository>();
+
+            // 3. Basket service (business logic layer)
+            builder.Services.AddScoped<IBasketServices, Basketservices>();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
