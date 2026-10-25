@@ -124,11 +124,22 @@ namespace ShopHub.API
 
             var app = builder.Build();
 
-            using(var scope = app.Services.CreateScope())
+            using (var scope = app.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
-                var context = services.GetRequiredService<AppDbContext>();
-                await DataSeeder.Seeder(context);
+
+                // 1. Application database
+                var appContext = services.GetRequiredService<AppDbContext>();
+                await appContext.Database.MigrateAsync();
+
+                // 2. Identity database
+                var identityContext =
+                    services.GetRequiredService<Identitydbcontext>();
+
+                await identityContext.Database.MigrateAsync();
+
+                // 3. Seed application data after migrations
+                await DataSeeder.Seeder(appContext);
             }
 
             // Configure the HTTP request pipeline.

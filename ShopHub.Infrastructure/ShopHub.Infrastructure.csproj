@@ -24,4 +24,11 @@
     <ProjectReference Include="..\ShopHub.Domain\ShopHub.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+	  <Content Include="Data\SeedData\**\*.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+  </ItemGroup>
+
 </Project>

@@ -14,11 +14,15 @@ namespace ShopHub.Infrastructure.Data.SeedData
     {
         public static async Task Seeder(AppDbContext dbcontext)
         {
+
+            var seedDirectory = Path.Combine(AppContext.BaseDirectory, "Data", "SeedData");
+
             // -- Seed Product Brands 
             if (!await dbcontext.ProductBrands.AnyAsync()) 
             {
-                var brandjson = await File.ReadAllTextAsync(
-                    "E:\\Elwan\\.NET\\ShopHub\\ShopHub.Infrastructure\\Data\\SeedData\\ProductBrand.json");
+                var brandjsonpath = Path.Combine(seedDirectory, "ProductBrand.json");
+
+                var brandjson = await File.ReadAllTextAsync(brandjsonpath);
 
                 var brands = JsonSerializer.Deserialize<List<ProductBrand>>(brandjson);
 
@@ -31,8 +35,9 @@ namespace ShopHub.Infrastructure.Data.SeedData
             // -- Seed Product Types
             if (!await dbcontext.ProductTypes.AnyAsync())
             {
-                var typejson = await File.ReadAllTextAsync(
-                    "E:\\Elwan\\.NET\\ShopHub\\ShopHub.Infrastructure\\Data\\SeedData\\ProductType.json");
+                var typejsonpath = Path.Combine(seedDirectory, "ProductType.json");
+
+                var typejson = await File.ReadAllTextAsync(typejsonpath);
 
                 var types = JsonSerializer.Deserialize<List<ProductType>>(typejson);
 
@@ -45,8 +50,9 @@ namespace ShopHub.Infrastructure.Data.SeedData
             // -- Seed Product 
             if (!await dbcontext.Products.AnyAsync())
             {
-                var productjson = await File.ReadAllTextAsync(
-                    "E:\\Elwan\\.NET\\ShopHub\\ShopHub.Infrastructure\\Data\\SeedData\\Product.json");
+                var productjsonpath = Path.Combine(seedDirectory, "Product.json");
+                
+                var productjson = await File.ReadAllTextAsync(productjsonpath);
 
                 var products = JsonSerializer.Deserialize<List<Product>>(productjson);
 
